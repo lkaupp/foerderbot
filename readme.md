@@ -26,6 +26,6 @@ In order to run the application:
 2. Install docker CE
 3. Install nvidia toolkit & configure docker
 4. Create folder "foerderbot"
-5. Copy folders and files `docker, app, storage, qdrant_storage, requirements.txt, docker-compose.yml` to the foerderbot folder
+5. Copy folders and files `docker, app, qdrant_storage, requirements.txt, docker-compose.yml` to the foerderbot folder
 6. Run `sudo docker compose --env-file=.env.prod up --build -d`
 7. Foerderbot is now running at port 80
