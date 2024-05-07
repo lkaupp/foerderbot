@@ -3,6 +3,8 @@ ______
 
 An example application for retrieval augmented generation (RAG) based on hessian funding lines.
 
+* [Live-Demo](https://foerderbot-fzai.kaupp.me/)
+
 Technology Stack:
 * [LLamaIndex](https://www.llamaindex.ai/) (Framework)
 * [Qdrant](https://qdrant.tech/) (Vector Database)
