@@ -17,7 +17,7 @@ Models:
 * [German_Semantic_STS_V2](https://huggingface.co/aari1995/German_Semantic_STS_V2) (Embedding model)
 * [Llama3](https://huggingface.co/docs/transformers/main/model_doc/llama3) (LLM model)
 
-LLamaIndex is used with the regular SimpleDataLoader, and Vector Store (both can be improved by using Plugins or external vector databases). 
+LLamaIndex is used with the regular SimpleDataLoader, and Qdrant Vector Store / Database (both can be improved by using Plugins). 
 Ollama is used for hosting the Llama3 model which of course can be used standalone. FastAPI is the standard backend server, interacting with the Angular application 
 over a super basic REST API. Angular 2+ and Material are used as frontend libraries (used a fraction of their capabilities only, 
 IMHO Angular is the best enterprise frontend framework).
