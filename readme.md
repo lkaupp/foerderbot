@@ -1,4 +1,4 @@
-# Förderbot
+# FörderBot Hessen - Forschungszentrum Angewandte Informatik, h_da
 ______
 
 An example application for retrieval augmented generation (RAG) based on hessian funding lines.
