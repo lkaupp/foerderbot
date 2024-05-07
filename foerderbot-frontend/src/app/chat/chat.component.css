@@ -1,0 +1,47 @@
+.chat-bubble{
+  background-color: white;
+  margin: 10px;
+  word-break: break-all;
+
+}
+.app-header {
+  height:  10vh;
+}
+
+.mat-toolbar-behind {
+    position: relative;
+    z-index: 1;
+}
+
+.card-body {
+  font-family: 'quintessential';
+  font-size: 2em;
+  line-height: 1.3em;
+  background: white;
+}
+.card-body-toolbar {
+  font-family: 'almendra';
+  line-height: 1.3em;
+  background: white;
+  font-size: 3rem;
+  height: 10vh;
+}
+
+
+.card-header {
+  font-family: 'almendra';
+  font-size: 1.5rem;
+}
+
+.gloombot-avatar {
+  background-image: url('/static/assets/hda_eut_de_cover.png');
+  background-size: cover;
+}
+
+.my-avatar {
+  background-image: url('/static/assets/myself.png');
+  background-size: cover;
+}
+.mdc-circular-progress__indeterminate-circle-graphic{
+  stroke: black !important;
+}

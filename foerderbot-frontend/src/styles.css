@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: ghostwhite !important; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-toolbar.mat-primary {
+  background: white;
+  color: #000;
+  font-family: 'almendra' !important;
+  font-size: 3rem;
+  height: 10vh;
+
+
+}
+.mat-mdc-text-field-wrapper{
+  background-color: lightgray !important;
+}
+
+
+@font-face {
+  font-family: 'almendra';
+
+  src: url('/static/assets/RadioCanadaBig-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'quintessential';
+  src: url('/static/assets/Manrope-Regular.ttf');
+}
+* {
+  /* font-family: 'almendra' !important;
+ font-size: 1.4rem;
+  /* Add !important to overwrite all elements */
+}
+
+#mat-input-0 {
+  font-family: 'quintessential';
+  font-size: 1.5rem;
+  color: black !important;
+  resize: none;
+}
+

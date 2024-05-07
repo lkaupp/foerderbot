@@ -1,0 +1,57 @@
+version: '3.1'
+
+services:
+
+
+  db:
+    image: qdrant/qdrant
+    restart: unless-stopped
+    expose:
+      - 6333
+      - 6334
+
+    env_file:
+      - .env.prod
+    volumes:
+      - data:/qdrant/storage
+
+  app:
+    image: foerderbot/app
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+    build:
+      context: .
+      dockerfile: docker/backend.dockerfile
+    env_file:
+      - .env.prod
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  ollama:
+    image: foerderbot/ollama
+    build:
+      context: .
+      dockerfile: docker/ollama.dockerfile
+    expose:
+      - 11434
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${DATABASE_PATH}
+      o: bind

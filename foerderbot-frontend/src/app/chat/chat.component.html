@@ -1,0 +1,68 @@
+<div  fxFill fxLayoutAlign="space-around center">
+
+<div fxFlex="66" fxLayout="column"  fxFill>
+  <div class="bordered "  fxFlex="0 0 auto">
+		<mat-card>
+      <mat-card-content class="card-body-toolbar">
+    <span fxFlex="45">Förderbot Hessen</span><span fxFlexOffset="30" fxFlex="20"><img width="auto" height="70"  src="/static/assets/hda_eut_de_cover.png"></span>
+    </mat-card-content>
+   </mat-card>
+	</div>
+	<div  #listComponent  fxFlex fxLayout="column">
+		<cdk-virtual-scroll-viewport #virtualViewport [itemSize]="50" fxFlex  fxLayout="column" fxLayoutAlign="space-between">
+			<div *cdkVirtualFor="let message of messages$; let odd=even" [fxLayoutAlign]="odd?'end':'start'"  [style.height]="'auto'" >
+				<mat-card  fxFill class="chat-bubble" fxFlex="66"  >
+                      <mat-card-header >
+                        <div mat-card-avatar [class]="message.author == 'FörderBot'? 'gloombot-avatar': 'my-avatar'"></div>
+                        <mat-card-title class="card-header"> {{message.author}}</mat-card-title>
+                      </mat-card-header>
+                      <mat-card-content class="card-body">
+                        <markdown [data]="message.text" ngPreserveWhitespaces/>
+                      </mat-card-content>
+                    </mat-card>
+			</div>
+      <div *ngIf="loading" fxLayoutAlign="end" style="margin: 10px">
+        <mat-spinner [diameter]="30" [strokeWidth]="5" [style.--mdc-circular-progress-active-indicator-color]="'black'" ></mat-spinner>
+      </div>
+		</cdk-virtual-scroll-viewport>
+	</div>
+  <div class="app-footer" fxFlex="0 0 auto">
+	<div style="line-height: 0.2; margin-bottom: 0px; padding-bottom: 0px;">
+		<mat-form-field  color="primary" [style.--mdc-filled-text-field-caret-color]="'black'" [style.--mdc-filled-text-field-focus-active-indicator-color]="'black'"   fxFill >
+      <textarea matInput (keyup.enter)="addnew($event)" [(ngModel)]="text" placeholder="Frage: Mit welcher Förderlinie kann ich mein Kulturprojekt fördern?"></textarea>
+    </mat-form-field>
+	</div>
+    <div style="line-height: 0.2; margin: 0px;">
+      <markdown  ngPreserveWhitespaces>
+        <b>RAG Demo Application</b> &copy; 2024 <a href="https://kaupp.me" target="_blank">Dr. Lukas Kaupp</a>
+      </markdown>
+    </div>
+  </div>
+
+</div>
+</div>
+<!--<div fxLayoutAlign="space-around center" fxFill>
+
+<div    fxFlex="80"  fxLayout="column">
+<div #listComponent fxFill  fxFlex="66" fxLayout="column"  fxLayoutAlign="space-around center" >
+  <cdk-virtual-scroll-viewport #virtualViewport [itemSize]="50" fxFill>
+      <div fxFill *cdkVirtualFor="let message of messages; let index = index; let odd=odd; let even=even;" [fxLayoutAlign]="odd?'end':'start'"  [style.height.px]="50" >
+                    <mat-card  fxFill class="chat-bubble" fxFlex="66"  >
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title> {{message.author}}</mat-card-title>
+                      </mat-card-header>
+                      <mat-card-content>
+                          {{message.text}}
+                      </mat-card-content>
+                    </mat-card>
+      </div>
+  	</cdk-virtual-scroll-viewport>
+</div>
+  <div fxFlex="0 0 auto">
+    <mat-form-field  fxFill >
+      <textarea matInput (keyup.enter)="messages.push({author:'me', text: $any($event.target).value}); text =''; " [(ngModel)]="text" placeholder="Question?"></textarea>
+    </mat-form-field>
+  </div>
+  </div>
+</div>-->
