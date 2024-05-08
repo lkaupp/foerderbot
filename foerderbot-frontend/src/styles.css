@@ -2,18 +2,6 @@
 
 html, body { height: 100%; background-color: ghostwhite !important; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.mat-toolbar.mat-primary {
-  background: white;
-  color: #000;
-  font-family: 'almendra' !important;
-  font-size: 3rem;
-  height: 10vh;
-
-
-}
-.mat-mdc-text-field-wrapper{
-  background-color: lightgray !important;
-}
 
 
 @font-face {
@@ -32,6 +20,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   /* Add !important to overwrite all elements */
 }
 
+
+.mat-toolbar.mat-primary {
+  background: white;
+  color: #000;
+  font-family: 'almendra' !important;
+  font-size: 3rem;
+  height: 10vh;
+}
+.mat-mdc-text-field-wrapper{
+  background-color: lightgray !important;
+}
 #mat-input-0 {
   font-family: 'quintessential';
   font-size: 1.5rem;
@@ -39,3 +38,36 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   resize: none;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .mat-toolbar.mat-primary {
+    background: white;
+    color: #000;
+    font-family: 'almendra' !important;
+    font-size: 0.5rem;
+    height: 10vh;
+  }
+  #mat-input-0 {
+    font-family: 'quintessential';
+    font-size: 0.8rem;
+    color: black !important;
+    resize: none;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1281px){
+    /* For mobile phones: */
+  .mat-toolbar.mat-primary {
+    background: white;
+    color: #000;
+    font-family: 'almendra' !important;
+    font-size: 0.5rem;
+    height: 10vh;
+  }
+  #mat-input-0 {
+    font-family: 'quintessential';
+    font-size: 0.8rem;
+    color: black !important;
+    resize: none;
+  }
+
+}

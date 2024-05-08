@@ -12,6 +12,11 @@
     position: relative;
     z-index: 1;
 }
+.card-header {
+  font-family: 'almendra';
+  font-size: 1.5rem;
+}
+
 
 .card-body {
   font-family: 'quintessential';
@@ -27,11 +32,68 @@
   height: 10vh;
 }
 
+.logo {
+    width: 100%;
+  }
 
-.card-header {
-  font-family: 'almendra';
-  font-size: 1.5rem;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card-body-toolbar {
+      font-family: 'almendra';
+      line-height: 1.3em;
+      background: white;
+      font-size: 1rem;
+      height: 10vh;
+  }
+  .card-body {
+    font-family: 'quintessential';
+    font-size: 0.9rem;
+    line-height: 1.3em;
+    background: white;
+  }
+  .card-header {
+    font-family: 'almendra';
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    width: 60%;
+  }
+  .authorbox{
+    display: block;
+    word-break: break-all;
+  }
 }
+
+@media screen and (min-width: 960px) and (max-width: 1281px){
+   .card-body-toolbar {
+      font-family: 'almendra';
+      line-height: 1.3em;
+      background: white;
+      font-size: 1rem;
+      height: 10vh;
+  }
+  .card-body {
+    font-family: 'quintessential';
+    font-size: 0.9rem;
+    line-height: 1.3em;
+    background: white;
+  }
+  .card-header {
+    font-family: 'almendra';
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 60%;
+  }
+  .authorbox{
+    display: block;
+    word-break: break-all;
+  }
+}
+
+
 
 .gloombot-avatar {
   background-image: url('/static/assets/hda_eut_de_cover.png');

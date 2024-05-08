@@ -4,7 +4,7 @@
   <div class="bordered "  fxFlex="0 0 auto">
 		<mat-card>
       <mat-card-content class="card-body-toolbar">
-    <span fxFlex="45">Förderbot Hessen</span><span fxFlexOffset="30" fxFlex="20"><img width="auto" height="70"  src="/static/assets/hda_eut_de_cover.png"></span>
+    <span fxFlex.gt-lg="45" fxFlex.gt-xs="10">Förderbot Hessen</span><span fxFlexOffset.gt-lg="30" fxFlexOffset.gt-xs="30" fxFlex.gt-lg="20" fxFlex.gt-xs="20"><img class="logo" src="/static/assets/hda_eut_de_cover.png"></span>
     </mat-card-content>
    </mat-card>
 	</div>
@@ -32,9 +32,9 @@
       <textarea matInput (keyup.enter)="addnew($event)" [(ngModel)]="text" placeholder="Frage: Mit welcher Förderlinie kann ich mein Kulturprojekt fördern?"></textarea>
     </mat-form-field>
 	</div>
-    <div style="line-height: 0.2; margin: 0px;">
-      <markdown  ngPreserveWhitespaces>
-        <b>RAG Demo Application</b> &copy; 2024 <a href="https://kaupp.me" target="_blank">Dr. Lukas Kaupp</a>
+    <div  style="line-height: 0.2; margin: 0px; ">
+      <markdown ngPreserveWhitespaces class="authorbox">
+        <b>RAG App</b> &copy; 2024 <a href="https://kaupp.me" target="_blank">Dr. Lukas Kaupp</a>
       </markdown>
     </div>
   </div>
